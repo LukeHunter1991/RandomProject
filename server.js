@@ -1,4 +1,4 @@
-require("dotenv").config
+require("dotenv").config()
 
 const express = require('express');
 const path = require('path');
@@ -15,7 +15,7 @@ app.get('/', (req, res) =>
 );
 
 app.get('/secret', (req, res) =>
-  res.send(process.env.USER)
+  res.json(process.env.USER)
 );
 
 
